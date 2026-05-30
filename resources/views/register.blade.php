@@ -159,7 +159,7 @@
     <div class="logo">
 
         <div class="logo-circle">
-            <img src="{{ asset('images/logo2.png') }}" alt="">
+            <img src="{{ asset('images/Logo2.png') }}">
         </div>
 
     </div>

@@ -148,7 +148,7 @@
     </div>
 
     <div class="logo">
-        <img src="{{ asset('images/logo.png') }}" alt="">
+       <img src="{{ asset('images/Logo.png') }}">
     </div>
 
     <div class="form-area">
