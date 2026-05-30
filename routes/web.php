@@ -257,7 +257,7 @@ Route::post('/absen-masuk/{id}', function ($id) {
 
     }
 
-    return back();
+    return redirect('/home');
 
 });
 
@@ -308,7 +308,7 @@ Route::post('/selesai-sesi/{id}', function ($id) {
 
     ]);
 
-    return back();
+    return redirect('/home');
 
 });
 

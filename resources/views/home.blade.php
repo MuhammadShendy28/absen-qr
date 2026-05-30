@@ -428,7 +428,7 @@ $sessionEnded = now()->format('H:i') > $schedule->end_time;
 
 @if(!$attendance)
 
-<form action="/absen-masuk/{{ $schedule->id }}" method="POST">
+<form action="{{ route('absen.masuk', $schedule->id) }}" method="POST">
 
 @csrf
 
