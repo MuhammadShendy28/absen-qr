@@ -461,34 +461,13 @@ Route::get('/profile', function () {
 |--------------------------------------------------------------------------
 */
 
+/*
 Route::get('/notifications', function () {
 
-    if(!session('user_id')){
-        return redirect('/');
-    }
-
-    $notifications = DB::table('notifications')
-
-        ->where('user_id', session('user_id'))
-
-        ->latest()
-
-        ->get();
-
-    DB::table('notifications')
-
-        ->where('user_id', session('user_id'))
-
-        ->update([
-            'is_read' => 1
-        ]);
-
-    return view(
-        'notifications',
-        compact('notifications')
-    );
+    ...
 
 });
+*/
 
 /*
 |--------------------------------------------------------------------------

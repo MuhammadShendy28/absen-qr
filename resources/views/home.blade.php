@@ -268,13 +268,7 @@ body{
 
             @php
 
-$unread = DB::table('notifications')
-
-    ->where('user_id', session('user_id'))
-
-    ->where('is_read', 0)
-
-    ->count();
+$unread = 0;
 
 @endphp
 
