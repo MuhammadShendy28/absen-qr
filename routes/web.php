@@ -159,8 +159,6 @@ Route::get('/home', function () {
 
     $schedules = DB::table('schedules')
 
-        ->whereDate('date', $today)
-
         ->when($search, function($query) use ($search){
 
             $query->where(
