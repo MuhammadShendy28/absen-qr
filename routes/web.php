@@ -117,8 +117,6 @@ Route::get('/home', function () {
 
     $totalSchedule = DB::table('schedules')
 
-        ->whereDate('date', $today)
-
         ->count();
 
     $totalAttendance = $hadir + $telat;
@@ -331,8 +329,6 @@ Route::get('/schedule', function () {
         : now()->toDateString();
 
     $schedules = DB::table('schedules')
-
-        ->whereDate('date', $selectedDate)
 
         ->orderBy('start_time', 'asc')
 
