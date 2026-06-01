@@ -191,6 +191,9 @@ Route::get('/home', function () {
 
 Route::post('/absen-masuk/{id}', function ($id) {
 
+    dd(session('user_id'));
+
+
     $schedule = DB::table('schedules')
         ->where('id', $id)
         ->first();
