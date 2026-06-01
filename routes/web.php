@@ -236,6 +236,10 @@ Route::post('/absen-masuk/{id}', function ($id) {
 
         }
 
+        if(!session('user_id')){
+    return 'SESSION KOSONG';
+}
+
         DB::table('attendances')->insert([
 
             'user_id' => session('user_id'),
