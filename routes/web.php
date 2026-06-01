@@ -259,7 +259,7 @@ Route::post('/absen-masuk/{id}', function ($id) {
 
     return redirect('/home');
 
-});
+})->name('absen.masuk');
 
 /*
 |--------------------------------------------------------------------------
