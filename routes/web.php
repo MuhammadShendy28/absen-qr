@@ -191,9 +191,6 @@ Route::get('/home', function () {
 
 Route::post('/absen-masuk/{id}', function ($id) {
 
-    dd(session('user_id'));
-
-
     $schedule = DB::table('schedules')
         ->where('id', $id)
         ->first();
@@ -236,10 +233,6 @@ Route::post('/absen-masuk/{id}', function ($id) {
 
         }
 
-        if(!session('user_id')){
-    return 'SESSION KOSONG';
-}
-
         DB::table('attendances')->insert([
 
             'user_id' => session('user_id'),
@@ -251,16 +244,11 @@ Route::post('/absen-masuk/{id}', function ($id) {
 
         ]);
 
-        DB::table('notifications')->insert([
-
-            'user_id' => session('user_id'),
-            'title' => 'Absen masuk berhasil',
-            'message' => 'Absensi untuk ' . $schedule->title . ' berhasil dicatat',
-            'is_read' => 0,
-            'created_at' => now(),
-            'updated_at' => now()
-
-        ]);
+        /*
+DB::table('notifications')->insert([
+...
+]);
+*/
 
     }
 
@@ -300,20 +288,11 @@ Route::post('/selesai-sesi/{id}', function ($id) {
 
         ->first();
 
-    DB::table('notifications')->insert([
-
-        'user_id' => session('user_id'),
-
-        'title' => 'Sesi selesai',
-
-        'message' => 'Absensi keluar berhasil dicatat',
-
-        'is_read' => 0,
-
-        'created_at' => now(),
-        'updated_at' => now()
-
-    ]);
+    /*
+DB::table('notifications')->insert([
+...
+]);
+*/
 
     return redirect('/home');
 

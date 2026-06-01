@@ -272,7 +272,7 @@ $unread = 0;
 
 @endphp
 
-<a href="/notifications" style="
+<a href="#" style="
     position:relative;
     color:white;
 ">
